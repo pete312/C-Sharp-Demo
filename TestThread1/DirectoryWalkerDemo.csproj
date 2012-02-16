@@ -39,10 +39,6 @@
   <ItemGroup>
     <Compile Include="LazyTimerEventArgs.cs" />
     <Compile Include="DirectoryWalker.cs" />
-    <Compile Include="tests\TestDirectoryWalker.cs" />
-    <Compile Include="tests\TestHelper.cs" />
-    <Compile Include="tests\TestLazyTimer.cs" />
-    <Compile Include="tests\walk.cs" />
     <Compile Include="ThreadForm.cs">
       <SubType>Form</SubType>
     </Compile>

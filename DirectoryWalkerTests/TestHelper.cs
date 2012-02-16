@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
+using DirectroryWalker.Demo;
 
-namespace TestThread1.tests
+namespace DirectoryWalkerDemo.Tests
 {
     class TimerTester
     {

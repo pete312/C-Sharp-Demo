@@ -4,8 +4,9 @@ using System.Text;
 using System.Threading;
 using TestThread1;
 using NUnit.Framework;
+using DirectroryWalker.Demo;
 
-namespace TestThread1.tests
+namespace DirectoryWalkerDemo.Tests.LazyTimerClass
 {
     
     [TestFixture]
@@ -18,14 +19,14 @@ namespace TestThread1.tests
         const int TEN_MILLISEC = 10;
 
 
-        [TestCase]
+        [Test]
         public void Test_Throws_Exception()
         {
             Assert.Throws<ArgumentException>(delegate { new LazyTimer(0); });
             Assert.Throws<ArgumentException>(delegate { new LazyTimer(-1); });
         }
 
-        [TestCase]
+        [Test]
         public void Check_NextRand_limits()
         {
 
@@ -41,7 +42,7 @@ namespace TestThread1.tests
         }
 
 
-        [TestCase]
+        [Test]
         public void Run_With_External_Thread()
         {
 
@@ -76,7 +77,7 @@ namespace TestThread1.tests
             Assert.GreaterOrEqual(timed_test.GetTriggerCount(), (TWO_SECONDS / TEN_MILLISEC)); // we should have at least 2000 / 10 = 400 
         }
 
-        [TestCase]
+        [Test]
         public void Internal_Thread_Start_Stop_test()
         {
             LazyTimer lazybones = new LazyTimer(ONE_SECOND);
@@ -94,7 +95,7 @@ namespace TestThread1.tests
 
         }
 
-        [TestCase]
+        [Test]
         public void Test_Multi_Subscribers()
         {
             LazyTimer lazybones = new LazyTimer(ONE_SECOND);
@@ -115,7 +116,7 @@ namespace TestThread1.tests
             Assert.IsTrue(evaluator2.HasTirggered());
         }
 
-        [TestCase]
+        [Test]
         public void Test_Unsubscribe()
         {
             // TODO implement Unsubscribe

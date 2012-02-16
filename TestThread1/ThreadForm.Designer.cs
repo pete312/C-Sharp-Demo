@@ -1,4 +1,4 @@
-namespace TestThread1
+namespace DirectroryWalker.Demo
 {
     partial class ThreadForm
     {

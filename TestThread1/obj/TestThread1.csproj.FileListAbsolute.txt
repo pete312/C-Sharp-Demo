@@ -18,3 +18,13 @@ C:\src\learnc#\TestThread\TestThread1\obj\Debug\ResolveAssemblyReference.cache
 C:\src\learnc#\TestThread\TestThread1\obj\Debug\TestThread1.ThreadForm.resources
 C:\src\learnc#\TestThread\TestThread1\obj\Debug\TestThread1.Properties.Resources.resources
 C:\src\learnc#\TestThread\TestThread1\obj\Debug\TestThread1.csproj.GenerateResource.Cache
+C:\src\learnc#\C-Demo\TestThread1\obj\Debug\TestThread1.exe
+C:\src\learnc#\C-Demo\TestThread1\obj\Debug\TestThread1.pdb
+C:\src\learnc#\C-Demo\TestThread1\bin\Debug\TestThread1.exe
+C:\src\learnc#\C-Demo\TestThread1\bin\Debug\TestThread1.pdb
+C:\src\learnc#\C-Demo\TestThread1\bin\Debug\nunit.framework.dll
+C:\src\learnc#\C-Demo\TestThread1\bin\Debug\nunit.framework.xml
+C:\src\learnc#\C-Demo\TestThread1\obj\Debug\ResolveAssemblyReference.cache
+C:\src\learnc#\C-Demo\TestThread1\obj\Debug\TestThread1.Properties.Resources.resources
+C:\src\learnc#\C-Demo\TestThread1\obj\Debug\TestThread1.csproj.GenerateResource.Cache
+C:\src\learnc#\C-Demo\TestThread1\obj\Debug\DirectroryWalker.Demo.ThreadForm.resources

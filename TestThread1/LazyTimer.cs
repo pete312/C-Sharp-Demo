@@ -6,9 +6,9 @@ using System.Threading;
 // the timer will will clip or crawl in a random fashion to mimic a load.
 
 
-namespace TestThread1
+namespace DirectroryWalker.Demo
 {
-    class LazyTimer
+    public class LazyTimer
     {
 
         private Thread _worker;

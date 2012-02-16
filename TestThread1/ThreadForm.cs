@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 
-namespace TestThread1
+namespace DirectroryWalker.Demo
 {
     public partial class ThreadForm : Form
     {

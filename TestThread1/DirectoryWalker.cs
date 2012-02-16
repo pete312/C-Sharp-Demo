@@ -6,10 +6,10 @@ using System.Threading;
 
 // This is a data model for the UI (or any other subscriber) to be able to view asyncronusly 
 
-namespace TestThread1
+namespace DirectroryWalker.Demo
 {
 
-    class DirectoryWalker //: System.Collections.IEnumerable
+    public class DirectoryWalker 
     {
         const int TEN_SECONDS = 10 * 1000;
         const int FAKE_LOAD = TEN_SECONDS;

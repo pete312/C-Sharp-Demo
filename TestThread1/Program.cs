@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace TestThread1
+namespace DirectroryWalker.Demo
 {
     static class Program
     {
