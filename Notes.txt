@@ -1,0 +1,41 @@
+Synopsis
+I ran into a problem when assigning the the results of the threads to the UI widgets. 
+I didnt understand why the interface would not allow me to do this safely. 
+
+  after adding subscriber and starting the _dirWalker thread up got an exception when trying to 
+  assign the progress state.
+  
+   _dirWalker = new DirectoryWalker();
+   _dirWalker.OnDiscoverDir += new DirectoryWalker.HandleEventView(UpdateProgressBar);
+   _dataModel = new Thread( new ThreadStart(_dirWalker.AsyncGetDirTree));
+   _dataModel.Start();
+
+private void UpdateProgressBar(object sender, ViewInfoEventArgs e) 
+{
+    int remain = e.countRemaining;
+    Console.WriteLine("progress update");
+    progressBar1.Value = remain;           << InvalidOperaionException exception here because the 
+                                                threads where not the same.
+
+}
+
+Microsoft help sugested a solution of this nature which I implemented but this has an exception 
+when you shutdown the app when there is a busy thread.
+
+delegate void SetTextCallback(string text);
+private void SetText(string text)
+{
+    // InvokeRequired required compares the thread ID of the
+    // calling thread to the thread ID of the creating thread.
+    // If these threads are different, it returns true.
+    if (this.Output.InvokeRequired)
+    {
+        SetTextCallback d = new SetTextCallback(SetText);
+        this.Invoke(d, new object[] { text });
+    }
+    else
+    {
+        this.Output.AppendText(text + "\n");
+    }
+}
+        
