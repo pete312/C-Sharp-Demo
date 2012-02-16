@@ -84,12 +84,19 @@ namespace DirectoryWalkerDemo.Tests.DirectoyWalkerClass
             worker.Start();
             Thread.Sleep(100);
 
+            foreach (string dir in _directory_list)
+            {
+                Console.WriteLine("<<" + dir);
+            }
+
             foreach (string dir in directory_sample)
             {
+                Console.WriteLine(">>" + dir);
                 Assert.True(_directory_list.Contains(dir));
             }
 
-            Assert.AreEqual(directory_sample.Length, _directory_list.Count);
+            // directory_sample has 1 less directory because it doesnt contain the base dir.
+            Assert.AreEqual(directory_sample.Length, _directory_list.Count - 1); 
 
         }
 

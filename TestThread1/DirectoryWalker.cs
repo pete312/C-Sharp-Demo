@@ -148,6 +148,10 @@ namespace DirectroryWalker.Demo
             catch (UnauthorizedAccessException)
             {
                 Console.WriteLine(path + " (access denied) ");
+                if (OnDiscoverDir != null)
+                {
+                    OnDiscoverDir(this, new ViewInfoEventArgs(path, path, max_depth));
+                }
                 return path;
             }
 
